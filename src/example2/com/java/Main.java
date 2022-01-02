@@ -25,6 +25,10 @@ public class Main<fore, foreach> {
         for (ClothingItem item : copied) {
             System.out.println(item);
         }
+        items[0].setPrice(5);
+        System.out.println(items[0]);
+        System.out.println(copied[0]);
+
     }
 }
 
