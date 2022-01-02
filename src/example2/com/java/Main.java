@@ -5,7 +5,7 @@ import example2.com.java.model.ClothingItem;
 import java.util.Arrays;
 
 public class Main<fore, foreach> {
-    public static void main(String[] args) {
+    public static <copied> void main(String[] args) {
         System.out.println("Array of primitives ");
         int[]  ints ={3,6,9,1};
         Arrays.stream(ints).forEach(System.out::println);
@@ -21,8 +21,13 @@ public class Main<fore, foreach> {
         for (ClothingItem item:items) {
             System.out.println(item);
     }
+        ClothingItem[] copied = Arrays.copyOf(items,items.length) ;
+        for (ClothingItem item:copied) {
+            System.out.println(item);
+        }
+        }
     }
 
 
 
-}
+
